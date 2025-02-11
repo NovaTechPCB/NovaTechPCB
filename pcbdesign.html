@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCB Design Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    .form-section {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-section h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .form-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-size: 1rem;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    input[type="file"] {
+      padding: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #2c3e50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #1a242f;
+    }
+
+    .required {
+      color: red;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="about.html">About</a>
+        <div class="dropdown-menu" >
+          
+          <a href="missions.html">Mission</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="services.html">Services</a>
+        <div class="dropdown-menu" >
+          <a href="pcbdesign.html">PCB Design</a>
+          <a href="pcbmanufactering.html">Manufacturing</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="resources.html">Resources</a>
+        <div class="dropdown-menu">
+          <a href="blog.html">Blogs</a>
+          <a href="tutorial.html">Tutorials</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+<div class="form-section">
+    <h1>PCB Design Request</h1>
+    <form id="pcbForm" action="https://formsubmit.co/novatechpcb2024@gmail.com" method="POST" enctype="multipart/form-data">
+
+      <label for="pcb-info">Basic Information about PCB <span class="required">*</span></label>
+      <textarea id="pcb-info" name="pcb_info" rows="4" placeholder="Enter details about the PCB design..." required></textarea>
+
+      <label for="email">Email Address <span class="required">*</span></label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+      <label for="contact">Contact Number <span class="required">*</span></label>
+      <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
+
+      <label for="pcb-file">Upload PCB Layout File (PDF or other formats) <span class="required">*</span></label>
+      <input type="file" id="pcb-file" name="pcb_file" accept=".pdf,.zip,.rar,.pcb,.gerber" readonly>
+
+      <input type="submit" value="Submit Request">
+    </form>
+  </div>
+  <!-- <script src="mail.js"></script> -->
+  
+  
+  <footer class="footer">
+    <div>
+      <h3>Contact</h3>
+      <a href="mailto:someone@example.com">Email Us</a>
+      <a href="tel:+8511807062">Call Us</a>
+      <a href="#">Find Us</a>
+    </div>
+    <div>
+      <h3>Services</h3>
+      <a href="#">PCB Design</a>
+      <a href="#">Prototyping</a>
+      <a href="#">Manufacturing</a>
+    </div>
+    <div>
+      <h3>Account</h3>
+      <a href="#">Login</a>
+      <a href="#">Register</a>
+      <a href="#">Profile</a>
+    </div>
+    <div>
+      <h3>Payment</h3>
+      <a href="#">Pricing</a>
+      <a href="#">Subscription</a>
+      <a href="#">FAQs</a>
+    </div>
+    <div class="footer">
+      <div class="social-media">
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+          <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" />
+        </a>
+        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+          <img src="https://cdn-icons-png.flaticon.com/512/145/145804.png" alt="YouTube" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/145/145805.png" alt="Instagram" />
+        </a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook" />
+        </a>
+      </div>
+    </div>
+   
+  </footer>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  const btn = document.getElementById('submit');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_liblmgm';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+</script>
+
+
+ 
+  <script src="script.js"></script>
+</body>
+</html>

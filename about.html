@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+      color: #2c3e50;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .team-member {
+      flex: 1 1 calc(33.333% - 20px);
+      background-color: #f8f9fa;
+      text-align: center;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .team-member h3 {
+      margin: 10px 0;
+      font-size: 1.5rem;
+      color: #2c3e50;
+    }
+
+    .team-member p {
+      font-size: 1rem;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .team-member {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="about.html">About</a>
+        <div class="dropdown-menu" >
+          
+          <a href="missions.html">Mission</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="services.html">Services</a>
+        <div class="dropdown-menu" >
+          <a href="pcbdesign.html">PCB Design</a>
+          <a href="pcbmanufactering.html">Manufacturing</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="resources.html">Resources</a>
+        <div class="dropdown-menu">
+          <a href="blog.html">Blogs</a>
+          <a href="tutorial.html">Tutorials</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="header">
+    <h1>About Us</h1>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <h2>Our Mission</h2>
+      <p>At our core, we aim to innovate and provide top-notch solutions to our clients. Our focus is on delivering excellence through teamwork, dedication, and a passion for problem-solving. We believe in making a positive impact in everything we do.</p>
+    </div>
+
+   
+
+    <div class="section">
+      <h2>Our Vision</h2>
+      <p>We envision a future where technology and creativity come together to solve the world's most pressing challenges. By staying ahead of trends and embracing innovation, we strive to create a sustainable and brighter future for everyone.</p>
+    </div>
+  </div>
+  <footer class="footer">
+    <div>
+      <h3>Contact</h3>
+      <a href="mailto:someone@example.com">Email Us</a>
+      <a href="tel:+8511807062">Call Us</a>
+      <a href="#">Find Us</a>
+    </div>
+    <div>
+      <h3>Services</h3>
+      <a href="#">PCB Design</a>
+      <a href="#">Prototyping</a>
+      <a href="#">Manufacturing</a>
+    </div>
+    <div>
+      <h3>Account</h3>
+      <a href="#">Login</a>
+      <a href="#">Register</a>
+      <a href="#">Profile</a>
+    </div>
+    <div>
+      <h3>Payment</h3>
+      <a href="#">Pricing</a>
+      <a href="#">Subscription</a>
+      <a href="#">FAQs</a>
+    </div>
+    <div class="footer">
+      <div class="social-media">
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+          <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" />
+        </a>
+        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+          <img src="https://cdn-icons-png.flaticon.com/512/145/145804.png" alt="YouTube" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/145/145805.png" alt="Instagram" />
+        </a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook" />
+        </a>
+      </div>
+    </div>
+   
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

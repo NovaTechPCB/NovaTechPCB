@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video and Image Carousel</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; background: #222; }
+        .carousel-container { position: relative; width: 600px; height: 400px; overflow: hidden; }
+        .carousel-item { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s; }
+        .carousel-item.active { opacity: 1; }
+        video, img { width: 100%; height: 100%; object-fit: cover; }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel-item active">
+            <video src="images/slider.mp4" autoplay muted></video>
+        </div>
+        <div class="carousel-item">
+            <img src="images/Novatechpcb.png" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+            <img src="images/ved.jpeg" alt="Image 2">
+        </div>
+    </div>
+    
+    <script>
+        const items = document.querySelectorAll('.carousel-item');
+        let index = 0;
+        const timings = [13000, 5000, 5000]; // 13 sec for video, 5 sec for each image
+
+        function showNextItem() {
+            items[index].classList.remove('active');
+            index = (index + 1) % items.length;
+            items[index].classList.add('active');
+            setTimeout(showNextItem, timings[index]);
+        }
+        
+        setTimeout(showNextItem, timings[index]);
+    </script>
+</body>
+</html>
